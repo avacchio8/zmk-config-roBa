@@ -88,7 +88,9 @@
                 <&macro_press>,
                 <&kp LCTRL &kp TAB>,
                 <&macro_release>,
-                <&kp TAB>;
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LCTRL>;
 
             label = "TABSW_ST";
         };
@@ -121,7 +123,7 @@
 &kp Q         &kp W           &lt 5 E     &kp R         &kp T                                        &kp Y            &kp U        &lt 5 I     &kp O        &kp P
 &kp A         &mt LCTRL S     &mt LALT D  &mt LSHIFT F  &kp G        &kp LS(LG(S))    &kp MINUS      &kp H            &mt RSHFT J  &mt RALT K  &mt RCTRL L  &lt 3 SEMICOLON
 &mt LCTRL Z   &mt LEFT_WIN X  &kp C       &kp V         &kp B        &kp COLON        &kp SEMICOLON  &kp N            &kp M        &kp COMMA   &kp DOT      &mt RSHFT SLASH
-&kp LEFT_ALT  &mkp MB3        &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB        &lt 5 ENTER    &lt 2 BACKSPACE                                        &tog 4
+&kp LEFT_ALT  &mkp MB3        &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB        &lt 5 ENTER    &lt 2 BACKSPACE                                        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -158,10 +160,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
 
