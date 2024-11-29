@@ -18,27 +18,37 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <11 10>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+        RTAB {
+            bindings = <&kp TAB>;
             key-positions = <20 21>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
+        RSTAB {
+            bindings = <&kp RS(TAB)>;
+            key-positions = <20 19>;
+        };
+
+        toEng {
+            bindings = <&kp LANG2>;
             key-positions = <24 25>;
+        };
+
+        toJp {
+            bindings = <&kp LANG1>;
+            key-positions = <31 30>;
+        };
+
+        tonzura {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
     };
 
@@ -78,19 +88,19 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans           &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans           &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &kp PRINTSCREEN  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans           &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&kp DELETE       &kp F7        &kp F8       &kp F9         &kp F12                    &kp AMPERSAND    &kp ASTRK          &kp BACKSLASH   &kp LPAR         &kp RPAR
+&trans           &mt LCTRL F4  &mt LALT F5  &mt LSHIFT F6  &kp F11  &trans    &trans  &kp MINUS        &mt RSHFT PERCENT  &mt RALT CARET  &mt RCTRL MINUS  &mt SINGLE_QUOTE EQUAL
+&kp PRINTSCREEN  &kp F1        &kp F2       &kp F3         &kp F10  &trans    &trans  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH        &kp LBKT         &kp RIGHT_BRACKET
+&trans           &trans        &trans       &trans         &trans   &trans    &trans  &trans                                                               &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp COLON        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                     &kp CARET  &trans         &trans        &kp LEFT_PARENTHESIS  &trans
-&kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH  &kp LC(LA(KP_NUMBER_0))    &trans  &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT             &trans
-&kp PERIOD       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA  &kp EQUAL                  &trans  &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END               &trans
-&trans           &trans           &trans           &trans           &trans     &trans                     &trans  &trans                                                        &trans
+&kp COLON        &kp N7        &kp N8           &kp N9        &kp MINUS                                     &kp CARET  &trans         &trans        &kp LEFT_PARENTHESIS  &kp BACKSPACE
+&kp KP_NUMBER_0  &mt LCTRL N4  &mt LEFT_ALT N5  &mt LSHFT N6  &kp SLASH  &kp LC(LA(KP_NUMBER_0))    &trans  &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT             &trans
+&kp PERIOD       &kp N1        &kp N2           &kp N3        &kp COMMA  &kp EQUAL                  &trans  &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END               &trans
+&trans           &trans        &trans           &trans        &trans     &trans                     &trans  &trans                                                        &trans
             >;
         };
 
