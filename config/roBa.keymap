@@ -88,9 +88,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp TAB>,
                 <&macro_release>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&kp TAB>;
 
             label = "TABSW_ST";
         };
@@ -98,7 +96,7 @@
         tabSw_ed: tabSw_ed {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release>, <&kp LCTRL>;
+            bindings = <&macro_press>, <&kp LCTRL>;
 
             label = "TABSW_ED";
         };
@@ -140,10 +138,10 @@
 
         NUM {
             bindings = <
-&kp COLON        &kp N7        &kp N8           &kp N9        &kp MINUS                                     &left4    &trans         &trans        &right4    &kp BACKSPACE
-&kp KP_NUMBER_0  &mt LCTRL N4  &mt LEFT_ALT N5  &mt LSHFT N6  &kp SLASH  &kp LC(LA(KP_NUMBER_0))    &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&kp PERIOD       &kp N1        &kp N2           &kp N3        &kp COMMA  &kp EQUAL                  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans           &trans        &trans           &trans        &trans     &trans                     &trans  &trans                                            &trans
+&kp COLON   &kp N7        &kp N8           &kp N9        &kp MINUS                                     &left4    &trans         &trans        &right4    &kp BACKSPACE
+&kp N0      &mt LCTRL N4  &mt LEFT_ALT N5  &mt LSHFT N6  &kp SLASH  &kp LC(LA(KP_NUMBER_0))    &trans  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&kp PERIOD  &kp N1        &kp N2           &kp N3        &kp COMMA  &kp EQUAL                  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+&trans      &trans        &trans           &trans        &trans     &trans                     &trans  &trans                                            &trans
             >;
         };
 
