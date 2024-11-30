@@ -96,7 +96,11 @@
         tabSw_ed: tabSw_ed {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp LCTRL>;
 
             label = "TABSW_ED";
         };
