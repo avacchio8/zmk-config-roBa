@@ -130,7 +130,7 @@
 &kp Q        &kp W           &lt 5 E     &kp R         &kp T                                        &kp Y            &kp U        &lt 5 I     &kp O        &kp P
 &kp A        &mt LCTRL S     &mt LALT D  &mt LSHIFT F  &kp G        &kp LS(LG(S))    &kp MINUS      &kp H            &mt RSHFT J  &mt RALT K  &mt RCTRL L  &lt 3 SEMICOLON
 &mt LCTRL Z  &mt LEFT_WIN X  &kp C       &kp V         &kp B        &kp COLON        &kp SEMICOLON  &kp N            &kp M        &kp COMMA   &kp DOT      &mt RSHFT SLASH
-&mkp MB3     &mkp MB3        &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB        &lt 5 ENTER    &lt 2 BACKSPACE                                        &kp LCTRL
+&mkp MB3     &trans          &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB        &lt 5 ENTER    &lt 2 BACKSPACE                                        &kp LCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -176,7 +176,7 @@
 
         SCL_UTIL {
             bindings = <
-&kp ESCAPE           &kp LG(LS(C))  &kp LG(V)     &kp LS(LG(D))      &kp LC(LG(T))                         &kp TAB  &kp LA(PRINTSCREEN)  &kp LC(C)      &kp LC(V)  &trans
+&kp ESCAPE           &kp LG(LS(C))  &kp LG(V)     &kp LG(LC(T))      &kp LG(LS(T))                         &kp TAB  &kp LA(PRINTSCREEN)  &kp LC(C)      &kp LC(V)  &trans
 &kp LG(LS(S))        &kp LCTRL      &kp LEFT_ALT  &kp LSHIFT         &trans             &trans     &trans  &trans   &kp RSHIFT           &kp RIGHT_ALT  &kp RCTRL  &kp GRAVE
 &kp LA(PRINTSCREEN)  &trans         &trans        &kp LS(LG(RIGHT))  &kp LC(LS(LG(B)))  &trans     &trans  &trans   &kp LS(LG(RIGHT))    &trans         &kp LWIN   &kp INSERT
 &trans               &trans         &trans        &trans             &trans             &space4    &trans  &trans                                                  &trans
