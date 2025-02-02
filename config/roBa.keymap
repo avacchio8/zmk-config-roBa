@@ -27,7 +27,7 @@
         };
 
         RTAB {
-            bindings = <&kp TAB>;
+            bindings = <&kp MINUS>;
             key-positions = <20 21>;
         };
 
