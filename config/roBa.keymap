@@ -21,21 +21,6 @@
             key-positions = <11 10>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 11>;
-        };
-
-        RTAB {
-            bindings = <&kp MINUS>;
-            key-positions = <20 21>;
-        };
-
-        RSTAB {
-            bindings = <&kp RS(TAB)>;
-            key-positions = <20 19>;
-        };
-
         toEng {
             bindings = <&kp LANG2>;
             key-positions = <24 25>;
@@ -54,6 +39,16 @@
         Rtonzura {
             bindings = <&kp ESCAPE>;
             key-positions = <8 9>;
+        };
+
+        single {
+            bindings = <&kp SQT>;
+            key-positions = <32 33>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <20 21>;
         };
     };
 
