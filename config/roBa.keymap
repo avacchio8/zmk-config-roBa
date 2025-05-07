@@ -135,6 +135,16 @@
 
             tap-ms = <20>;
         };
+
+        // エンコーダー：マウススクロール(MOVE_Y 専用)
+        scroll_move_y: sensor_rotate_msc_for_move_y {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(-20)>;
+
+            // tap-ms下限メモ Yの値で可変: Y(15) <81>, Y(20) <65>, Y(25) <49>
+            tap-ms = <65>;
+        };
     };
 
     keymap {
@@ -148,7 +158,7 @@
 &mkp MB3     &kp LWIN        &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB                              &lt 5 ENTER                          &lt 2 BACKSPACE                                        &kp LCTRL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_move_y>;
         };
 
         FUNC_SYMBOL {
