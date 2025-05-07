@@ -7,6 +7,8 @@
 #define SCROLL 5
 #define NUM 6
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <300>;
@@ -136,6 +138,14 @@
             tap-ms = <20>;
         };
 
+        scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
         // エンコーダー：マウススクロール(MOVE_Y 専用)
         scroll_move_y: sensor_rotate_msc_for_move_y {
             compatible = "zmk,behavior-sensor-rotate";
@@ -166,7 +176,7 @@
 &mkp MB3     &kp LWIN        &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB                              &lt 5 ENTER                          &lt 2 BACKSPACE                                        &kp LCTRL
             >;
 
-            sensor-bindings = <&scroll_move_y>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNC_SYMBOL {
