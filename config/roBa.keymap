@@ -145,6 +145,16 @@
             // tap-ms下限メモ Yの値で可変: Y(15) <81>, Y(20) <65>, Y(25) <49>
             tap-ms = <65>;
         };
+
+        // エンコーダー：マウススクロール(MOVE_Y 専用)
+        scroll_move_x: sensor_rotate_msc_for_move_x {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc MOVE_X(20)>, <&msc MOVE_X(-20)>;
+
+            // tap-ms下限メモ Xの値で可変: X(15) <81>, X(20) <65>, X(25) <49>
+            tap-ms = <65>;
+        };
     };
 
     keymap {
@@ -168,6 +178,8 @@
 &kp PRINTSCREEN  &kp F1        &kp F2       &kp F3         &kp F10  &trans      &trans  &kp EXCLAMATION  &kp AT_SIGN        &kp HASH        &kp LBKT         &kp RIGHT_BRACKET
 &trans           &trans        &trans       &trans         &trans   &trans      &trans  &trans                                                               &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         NUM_ARROW {
@@ -177,6 +189,8 @@
 &kp PERIOD  &kp N1        &kp N2           &kp N3        &kp COMMA  &kp EQUAL                    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
 &trans      &trans        &trans           &trans        &trans     &trans                       &trans  &trans                                            &trans
             >;
+
+            sensor-bindings = <&scroll_move_x>;
         };
 
         MOUSE_ETC {
