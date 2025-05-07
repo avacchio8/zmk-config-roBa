@@ -127,6 +127,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -140,7 +148,7 @@
 &mkp MB3     &kp LWIN        &mkp MB2    &mkp MB1      &lt 1 SPACE  &lt 5 TAB                              &lt 5 ENTER                          &lt 2 BACKSPACE                                        &kp LCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNC_SYMBOL {
